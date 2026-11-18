@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteção de Informações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔐 Proteção de Informações</h1>
+    <p>Criptografia e Hash com Python</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#criptografia">Criptografia</a>
+    <a href="#hash">Hash</a>
+    <a href="#python">Python</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<section id="inicio" class="principal">
+    <h2>Bem-vindo ao mundo da segurança digital!</h2>
+    <p>
+        Aprenda como proteger informações, criar senhas
+        seguras e entender como funcionam a criptografia
+        e o hash.
+    </p>
+</section>
+
+<section id="criptografia">
+    <h2>🔒 O que é criptografia?</h2>
+    <p>
+        Criptografia é uma técnica utilizada para transformar
+        informações em códigos, dificultando o acesso de
+        pessoas não autorizadas.
+    </p>
+
+    <h3>Exemplo:</h3>
+    <p>Senha original: 123456</p>
+    <p>Senha transformada: 234567</p>
+
+    <p>
+        Nesse exemplo, cada número foi aumentado em uma
+        unidade. É uma demonstração simples de transformação,
+        não uma criptografia segura.
+    </p>
+</section>
+
+<section id="hash">
+    <h2>🛡️ O que é Hash?</h2>
+    <p>
+        Hash é uma função que transforma uma informação
+        em uma sequência de caracteres de tamanho definido.
+        Ele é utilizado para verificar a integridade de dados
+        e armazenar senhas de maneira mais segura.
+    </p>
+
+    <p>
+        Um exemplo conhecido é o SHA-256, que gera
+        um resultado hexadecimal de 64 caracteres.
+    </p>
+</section>
+
+<section id="python">
+    <h2>💻 Criptografia com Python</h2>
+
+    <pre>
+senha = "123456"
+senha_criptografada = ""
+
+for numero in senha:
+    numero = int(numero) + 1
+    senha_criptografada += str(numero)
+
+print(senha_criptografada)
+    </pre>
+
+    <h3>Exemplo de Hash com Python</h3>
+
+    <pre>
+import hashlib
+
+senha = "123456"
+
+hash_senha = hashlib.sha256(
+    senha.encode()
+).hexdigest()
+
+print(hash_senha)
+    </pre>
+</section>
+
+<section class="demonstracao">
+    <h2>🔑 Teste sua própria senha</h2>
+    <p>Digite uma senha numérica para ver a transformação:</p>
+
+    <input type="password" id="senha" placeholder="Digite sua senha">
+
+    <button onclick="criptografar()">Transformar senha</button>
+
+    <p id="resultado"></p>
+
+    <p class="aviso">
+        Demonstração educativa. Não utilize senhas reais.
+    </p>
+</section>
+
+<section id="quiz">
+    <h2>🧠 Teste seus conhecimentos</h2>
+
+    <p>1. Para que serve a criptografia?</p>
+
+    <button onclick="responder(1)">Proteger informações</button>
+    <button onclick="responder(2)">Apagar arquivos</button>
+
+    <p>2. Qual biblioteca Python gera hashes?</p>
+
+    <button onclick="responder(3)">hashlib</button>
+    <button onclick="responder(4)">random</button>
+
+    <p id="resposta"></p>
+</section>
+
+<footer>
+    <p>Trabalho escolar - Unidade 2 - 3º Trimestre</p>
+    <p>Proteção de Informações | Criptografia e Hash com Python</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+Copiado
